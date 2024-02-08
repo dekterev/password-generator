@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 5px;
+  min-height: 50px;
+  padding: 0 10px;
+  max-width: 600px;
+}
+
+.password-text {
+  word-break: break-all;
+  padding: 0 10px;
+}
+
+.password-copy {
+  cursor: pointer;
+}
+
+.password-copy:hover {
+  text-decoration: underline;
+}
+
+.options ul{
+  padding: 0;
+}
+
+.options li {
+  text-align: left;
+  list-style: none;
+}
+
+.history ul {
+  padding: 0;
+  list-style: none;
+}
+
+.history li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.history li :first-child{
+  width: 100%;
+  text-align: left;
+}
+
+.notification {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  width: 300px;
+  z-index: 2;
+  background-color: gray;
+  border-radius: 5px;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 1.5rem;
+}
