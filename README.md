@@ -17,3 +17,47 @@ SecurePass is a robust Chrome extension designed to bolster your online security
 6. **Accessibility and Cross-Platform Compatibility:** Enjoy the convenience of accessing SecurePass across multiple devices and platforms. Whether you're using Chrome on your desktop, laptop, or mobile device, SecurePass ensures consistent performance and accessibility wherever you go.
 
 Protect your online accounts with confidence using SecurePass. Say goodbye to weak, easily guessable passwords and embrace the peace of mind that comes with knowing your digital identity is secure. Download SecurePass today and take control of your online security like never before.
+
+# Uploading Chrome Extension Locally from GitHub Repository
+
+## Prerequisites:
+- Google Chrome browser installed on your computer.
+
+## Steps:
+
+1. **Clone the Repository:**
+    - Open your terminal or command prompt.
+    - Use the `git clone` command to clone the GitHub repository of the Chrome extension:
+      ```
+      git clone git@github.com:dekterev/password-generator.git
+      ```
+
+2. **Navigate to the Extension Directory:**
+    - Use the `cd` command to navigate to the directory of the cloned repository:
+      ```
+      cd password-generator
+      ```
+
+3. **Enable Developer Mode in Chrome:**
+    - Open Google Chrome.
+    - Go to the browser menu (three dots) and select `More Tools` > `Extensions`.
+    - Toggle the `Developer mode` switch at the top right corner to enable it.
+
+4. **Load the Extension:**
+    - Click on the `Load unpacked` button that appears after enabling Developer mode.
+    - Navigate to the directory where the cloned repository is located.
+    - Select the folder containing the Chrome extension (usually named `extension` or similar) and click `Select Folder`.
+
+5. **Verify Installation:**
+    - The Chrome extension should now be loaded and visible in the extensions list.
+    - Ensure that the extension is enabled by toggling the switch next to it if necessary.
+
+6. **Test the Extension:**
+    - Open a new tab in Chrome and navigate to a website where the extension should be active.
+    - Test the functionality of the extension to ensure it works as expected.
+
+7. **Updating the Extension:**
+    - If there are updates to the extension in the GitHub repository, pull the changes using `git pull`.
+    - Reload the extension in Chrome by clicking the refresh icon next to the extension in the Extensions page.
+
+Congratulations! You have successfully uploaded the Chrome extension locally from the GitHub repository. Enjoy using the extension!

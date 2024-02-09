@@ -71,7 +71,6 @@ export const usePassword = () => {
 
         return () => {
             setPassword("");
-            setHistory([])
         }
     }, [options]);
 
