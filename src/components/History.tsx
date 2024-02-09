@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction } from "react";
 import { HistoryItem } from '../types.ts'
-import { HIDE_PASS } from "../constants.ts";
 
 interface Props {
     history: HistoryItem[]
@@ -19,7 +18,12 @@ export const History = ({
             <ul>
                 {history.map(({ pass, date, time, isShow }) => (
                     <li key={pass}>
-                        <span>{isShow ? pass : HIDE_PASS}</span>
+                        <span>
+                            {isShow
+                                ? pass
+                                : pass.replaceAll(/./g, '*')
+                            }
+                        </span>
                         <span className='history-date'>{date}, {time}</span>
                         <div className='history-buttons'>
                             <button onClick={() => setHistory((prev) => (prev.map(el => ({

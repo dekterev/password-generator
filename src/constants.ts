@@ -25,5 +25,3 @@ export const NOTIFICATION = {
     copy: 'Copied!',
     wrong: 'Some wrong happened',
 }
-
-export const HIDE_PASS = '**********'
