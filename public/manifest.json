@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "name": "Password generator",
+  "description": "SecurePass is a robust Chrome extension designed to bolster your online security by effortlessly generating strong, unique passwords for all your accounts.\n\nKey Features:\n1. Password Generation: Generate complex, randomized passwords with just a click of a button. SecurePass utilizes state-of-the-art algorithms to create unique combinations of characters, numbers, and symbols, significantly enhancing the security of your online accounts.\n\n2. Customization Options: Tailor your passwords to meet specific requirements by adjusting parameters such as length, character types, and inclusion/exclusion of certain characters. This flexibility allows you to generate passwords that adhere to the varying criteria of different websites and applications.\n\n3. Seamless Integration: Seamlessly integrate SecurePass into your browsing experience with its lightweight and unobtrusive interface. Access the password generator directly from your Chrome browser toolbar, allowing for quick and convenient password creation whenever you need it.\n\nProtect your online accounts with confidence using SecurePass. Say goodbye to weak, easily guessable passwords and embrace the peace of mind that comes with knowing your digital identity is secure.",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Safety password generator"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  }
+}
