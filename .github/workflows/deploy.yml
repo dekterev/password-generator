@@ -20,6 +20,9 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+env:
+  BASE_URL: ${{ secrets.BASE_URL }}
+
 jobs:
   # Single deploy job since we're just deploying
   deploy:
