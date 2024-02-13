@@ -25,3 +25,5 @@ export const NOTIFICATION = {
     copy: 'Copied!',
     wrong: 'Some wrong happened',
 }
+
+export const HISTORY_KEY = 'pass_history'

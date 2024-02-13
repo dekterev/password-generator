@@ -4,7 +4,8 @@ import {
     History,
     Checkbox,
 } from "./components";
-import { usePassword } from "./hook.tsx";
+import { usePassword } from "./hooks";
+import {Footer} from "./components/Footer.tsx";
 
 export default function App() {
     const {
@@ -60,6 +61,7 @@ export default function App() {
                 />
             </div>
             {notification && <div className='notification'>{notification}</div>}
+            <Footer />
         </>
     );
 }

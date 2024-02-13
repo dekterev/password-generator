@@ -7,6 +7,7 @@ export const getSymbolFromUnicode = () => {
 };
 
 export const getCharacterFromUnicode = () => {
+    // a-z
     return String.fromCharCode(Math.random() * (122 - 97) + 97);
 };
 

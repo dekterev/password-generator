@@ -1,15 +1,16 @@
 {
   "version": "1.0.0",
   "manifest_version": 3,
-  "name": "Password generator",
-  "description": "Safety password generator",
+  "name": "Safepass: Secure password generator",
+  "description": "Secure password generator",
   "action": {
     "default_popup": "index.html",
-    "default_title": "Safety password generator"
+    "default_title": "Secure password generator"
   },
   "icons": {
     "16": "logo.png",
     "48": "logo.png",
     "128": "logo.png"
-  }
+  },
+  "permissions": ["storage"]
 }

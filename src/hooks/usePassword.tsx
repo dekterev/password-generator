@@ -3,14 +3,21 @@ import {
     MINIMAL_LENGTH,
     INITIAL_OPTIONS,
     NOTIFICATION,
-} from './constants.ts'
-import {Option, OptionKeys, HistoryItem} from './types.ts'
+    HISTORY_KEY,
+} from '../constants.ts'
+import {
+    HistoryItem,
+    Option,
+    OptionKeys,
+} from '../types.ts'
 import {
     getCharacterFromUnicode,
+    getFromStorage,
     getRandomNumber,
     getSymbolFromUnicode,
-    getUpperCaseCharacterFromUnicode
-} from "./utils.ts";
+    getUpperCaseCharacterFromUnicode,
+    saveToStorage
+} from "../utils";
 
 export const usePassword = () => {
     const [passwordLength, setPasswordLength] = useState(MINIMAL_LENGTH);
@@ -46,16 +53,26 @@ export const usePassword = () => {
         }
         setPassword(pass);
         setHistory((prev) => [
-            ...prev,
             {
                 isShow: false,
                 pass,
                 date: new Date().toDateString(),
                 time: new Date().toLocaleTimeString(),
             },
+            ...(Array.isArray(prev) ? prev : []),
         ]);
+
+        history.length && saveToStorage(HISTORY_KEY, history)
+
         return pass;
     };
+
+    useEffect(() => {
+        (async ()=> {
+            const storage =  await getFromStorage(HISTORY_KEY)
+            setHistory(storage || [])
+        })()
+    }, []);
 
     useEffect(() => {
         if (Object.values(options).every(({value}) => !value)){
