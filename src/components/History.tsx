@@ -18,7 +18,7 @@ export const History = ({
         <details className="history">
             <summary>Password history</summary>
             <ul>
-                {history?.length && history?.map(({ pass, date, time, isShow }) => (
+                {history?.length ? history?.map(({ pass, date, time, isShow }) => (
                     <li key={pass} className='history-item'>
                         <span>
                             {isShow
@@ -28,20 +28,24 @@ export const History = ({
                         </span>
                         <span className='history-item-date'>{date}, {time}</span>
                         <div className='history-item-buttons'>
-                            <button onClick={() => setHistory((prev) => (prev.map(el => ({
+                            <button
+                                className='history-item-buttons__show'
+                                onClick={() => setHistory((prev) => (prev.map(el => ({
                                 ...el,
                                 isShow: el.pass === pass ? !el.isShow : el.isShow
                             }))))}>
                                 {isShow ? 'hide' : 'show'}
                             </button>
                             <button onClick={() => copyToClipboard(pass)}>copy</button>
-                            <button onClick={() => setHistory((prev) => (
+                            <button
+                                className='history-item-buttons__delete'
+                                onClick={() => setHistory((prev) => (
                                 prev.filter(el => el.pass !== pass)))}>
                                 delete
                             </button>
                         </div>
                     </li>
-                ))}
+                )) : <span>No history</span>}
             </ul>
             <div className='history-buttons'>
                 {/*{history.length > 5*/}

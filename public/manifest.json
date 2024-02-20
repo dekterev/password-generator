@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "manifest_version": 3,
   "name": "Safepass: Secure password generator",
-  "description": "Secure password generator",
+  "description": "SafePass is a secure Chrome extension designed to enhance your online security. Easily generate strong, unique passwords and store them securely locally on your device. Say goodbye to weak passwords and protect your digital identity with SafePass today!",
   "action": {
     "default_popup": "index.html",
     "default_title": "Secure password generator"

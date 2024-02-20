@@ -3,7 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  width: 100%;
+  width: 400px;
 }
 
 .password {
@@ -77,6 +77,11 @@
   gap: 1rem;
   padding: 0.5rem;
   list-style: none;
+  border-bottom: 1px solid black;
+}
+
+.history li:last-child {
+  border-bottom: none;
 }
 
 .history-item-buttons {
@@ -87,6 +92,14 @@
 
 .history-item-buttons > * {
   text-align: center;
+}
+
+.history-item-buttons__delete {
+  background-color: #E5E1EE;
+}
+
+.history-item-buttons__show {
+  background-color: #DFFDFF;
 }
 
 .history li > :first-child {

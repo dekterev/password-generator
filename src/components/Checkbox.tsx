@@ -18,7 +18,7 @@ export const Checkbox = ({
         <>
             <input
                 type="checkbox"
-                name={key}
+                id={key}
                 checked={value}
                 onChange={() => setOptions((prev: Option) => ({
                     ...prev,
